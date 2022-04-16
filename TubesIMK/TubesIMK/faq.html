@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<title>E-Commerce</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+.w3-sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+
+.accordion {
+  font-weight: bold;
+  background-color: white;
+  border-top: 1px solid #eb345e;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  color: #444;
+  cursor: pointer;
+  padding: 20px;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #eb345e;
+  color: white;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  border: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+</style>
+<body class="w3-content" style="max-width:1200px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+    <h3 class="w3-wide"><b>Beauty Collection.com</b></h3>
+  </div>
+  <div class="w3-padding-32 w3-large w3-text-grey" style="margin-top: 40px; font-weight:bold; border-right: 1px solid #eb345e">
+    <a href="#" class="w3-button w3-block w3-white w3-left-align">Payment</a>
+    <a href="#" class="w3-bar-item w3-button">Delivery</a>
+    <a href="#" class="w3-bar-item w3-button">Orders</a>
+	<a href="#" class="w3-bar-item w3-button">Refunds</a>
+    <a href="#" class="w3-bar-item w3-button">Account</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-pink w3-xlarge">
+  <div class="w3-bar-item w3-padding-24 w3-wide">Beauty Collection.com</div>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+  <!-- Top header -->
+  <header class="w3-container w3-xlarge" style="margin-top: 50px; margin-bottom: 30px">
+    <p class="w3-right">
+      <i class="w3-button w3-white w3-center w3-text-black w3-round-xxlarge" style="margin-right: 25px"><a href="home.html" class="w3-bar-item w3-button w3-center"><i class="fa fa-home"></i></a></i></i>
+  </header>
+
+  <!-- FAQ -->
+  <div class="w3-container w3-xlarge" style="padding: 0.24px 50px">
+	<p class="w3-left" style="margin-top: 20px; font-size: 30px; font-weight: bold">FAQ</p>
+	<button class="accordion">Metode Pembayaran di Beauty Collection.com</button>
+	<div class="panel" style="margin: 0px;">
+		<p style="font-size: 16px; margin: 10px 0px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	</div>
+
+	<button class="accordion">Apakah Bisa Melakukan COD (Bayar di Tempat)?</button>
+	<div class="panel" style="margin: 0px;">
+		<p style="font-size: 16px; margin: 10px 0px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	</div>
+	
+	<button class="accordion">Section 3</button>
+	<div class="panel" style="margin: 0px;">
+		<p style="font-size: 16px; margin: 10px 0px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	</div>
+	
+	<button class="accordion">Section 4</button>
+	<div class="panel" style="margin: 0px;">
+		<p style="font-size: 16px; margin: 10px 0px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	</div>
+  </div>
+  
+  
+ 
+ 
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
